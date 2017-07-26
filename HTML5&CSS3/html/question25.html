@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>优先级实战分析</title>
+    <style type="text/css">
+    body {
+        padding: 20px 100px;
+    }
+    
+    div {
+        margin-bottom: 20px;
+    }
+
+    .sub,.sup {
+        display: none;
+    }
+    
+    a:hover .sub {
+        display: block;
+    }
+
+    a:hover+.sup {
+        display: block;
+    }margin: 
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#">显示子菜单</a>
+        <div class="sub">
+            这里是子菜单，鼠标放上去能显示子菜单吗？为什么？
+        </div>
+    </div>
+    <div>
+        <a href="#">显示子菜单</a>
+        <div class="sup">
+            我是子菜单，鼠标放上去能显示子菜单。
+        </div>
+    </div>
+</body>
+
+</html>

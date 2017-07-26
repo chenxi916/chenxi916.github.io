@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第八课：浮动与定位</title>
+    <style type="text/css">
+    .one {
+        text-align: right;
+    }
+
+    .box1 {
+        width: 150px;
+        height: 150px;
+        background-color: #0F0;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+    .one .box1 {
+        z-index: 2;
+    }
+    
+    .box2 {
+        width: 150px;
+        height: 150px;
+        background-color: #F40;
+        position: relative;
+        top: -100px;
+        left: 100px;
+    }
+
+    .one .box2 {
+        z-index: 3;
+    }
+    
+    .box3 {
+        width: 150px;
+        height: 150px;
+        background-color: #F80;
+        position: relative;
+        top: -200px;
+        left: 50px;
+    }
+
+    .one .box3 {
+        z-index: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+
+    <div class="two">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+
+</html>

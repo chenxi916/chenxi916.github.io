@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>H5+CSS3原生基础第一阶段测试题</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    body {
+        font-size: 16px;
+        color: #333333;
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial;
+    }
+
+    header h1 {
+        font-size: 36px;
+        line-height: 43px;
+        padding-bottom: 5px;
+        margin: 16px 0;
+        text-align: center;
+        border-bottom: 2px solid #eee;
+    }
+
+    aside {
+        position: absolute;
+        left: 0;
+        top: 82px;
+        width: 260px;
+        padding-left: 20px;
+        
+    }
+
+    aside dt {
+        font: 18px/40px "Microsoft YaHei";
+        color: #fff;
+        padding-left: 15px;
+        height: 40px;
+        background-color: #336699;
+        border-radius: 8px 8px 0 0;
+    }
+
+    aside dd a {
+        display: block;
+        height: 30px;
+        font: 14px/30px "Microsoft YaHei";
+        border: 1px solid #ddd;
+        border-top: none;
+        padding-left: 15px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    aside dd a:hover {
+        text-decoration: underline;
+        color: #F40;
+        background-color: #f0f0f0;
+    }
+
+    article {
+        max-width: 940px;
+        border: 1px solid #ddd;
+        padding:0px 45px 20px;
+        float: right;
+    }
+    
+    article section {
+        border-bottom: 4px solid #e7e7e7;
+        margin: 16px 0;
+    }
+    
+    article section:last-of-type {
+        border: none;
+    }
+    
+    article h2 {
+        font-size: 1.75em;
+        line-height: 1.225;
+        padding-bottom: 0.3em;
+        margin-bottom: 16px;
+        margin-top: 1em;
+        border-bottom: 1px solid #eee;
+    }
+    
+    article h3 {
+        font-size: 1em;
+        line-height: 1.4;
+        margin-bottom: 16px;
+        margin-top: 1em;
+    }
+    
+    article h6 {
+        font-size: 0.9em;
+        font-weight: 100;
+        color: #f90;
+        line-height: 1.2;
+        padding-left: 26px;
+        margin: 16px 0 8px;
+    }
+    
+    article .answer,
+    article .question {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+        font-size: 85%;
+        line-height: 2em;
+        font-family: Consolas, "Liberation Mono", Courier, monospace;
+        overflow: auto;
+        padding: 16px 16px 16px 26px;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+    
+    article .question {
+        background-color: transparent;
+        padding: 0 16px 0 26px;
+    }
+    
+    article img {
+        display: block;
+        margin: 0 auto 10px;
+    }
+    
+    article .answer a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: #f90;
+    }
+    
+    article a:hover {
+        color: #f40;
+        text-decoration: underline;
+    }
+    
+    article pre,
+    article textarea {
+        width: 100%;
+        font-size: 14px;
+        color: #666;
+        border: none;
+        background-color: #f7f7f7;
+        padding: 16px 26px;
+        box-sizing: border-box;
+        resize: none;
+        overflow: auto;
+    }
+    
+    article pre {
+        padding: 0 26px;
+        margin-bottom: 10px;
+    }
+
+    .first span {
+        font-size: 1.25em;
+        color: #f90;
+    }
+
+    .click {
+        position: fixed;
+        bottom: 60px;
+        right: 10px;
+    }
+
+    .click a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        font-size: 14px;
+        line-height: 15px;
+        color: #FFF;
+        text-decoration: none;
+        background-color: #333;
+    }
+
+    .click a:hover {
+        background-color: #666;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <header><h1 id=head>H5+CSS3原生基础第一阶段测试题</h1></header>
+    
+    <div class="click"><a href="#head">回到顶部</a></div>    
+
+    <aside>
+        <dl>
+            <dt>目录</dt>
+            <dd><a href="#first">第一课：HTML5标签基础</a></dd>
+            <dd><a href="#second">第二课：CSS基本概念</a></dd>
+            <dd><a href="#third">第三课：CSS选择器</a></dd>
+            <dd><a href="#fourth">第四课：边框与边距</a></dd>
+            <dd><a href="#fifth">第五课：弹性盒子模型与显示模式</a></dd>
+            <dd><a href="#sixth">第六课：背景与背景定位</a></dd>
+            <dd><a href="#seventh">第七课：文本修饰</a></dd>
+            <dd><a href="#eighth">第八课：浮动与定位</a></dd>
+            <dd><a href="#ninth">第九课：transition动画</a></dd>
+            <dd><a href="#tenth">第十课：TransForm变换</a></dd>
+            <dd><a href="#eleventh">第十一课：animation及CSS3动画综合</a></dd>
+            <dd><a href="#twelfth">第十二课：媒体查询响应式与自适应</a></dd>
+            <dd><a href="#thirteenth">第十三课：其他综合</a></dd>
+        </dl>
+    </aside>
+
+    <article>
+        
+        <section id="first">
+            <h2>第一课：HTML5标签基础</h2>
+            <ul>
+                <li>
+                    <h3>&lt; !Doctype html!&gt; 的作用是什么？(5分)  </h3>
+                    <p class="answer">&lt;!Doctype html&gt;的作用是用来声明当前的网页按照HTML5标准编写的</p>
+                </li>
+                <li>
+                    <h3>1、请默写5个以上块状(块级)标签(5分)</h3>
+                    <p class="answer">Div、p、h1~h6、nav、table、ul、ol、li、dl、dt、dd …… </p>
+                </li>
+                <li>
+                    <h3>2、请默写5个以上行内标签(5分)</h3>
+                    <p class="answer">Span、a、strong、em、i、b、sub、sup ……</p>
+                </li>
+                <li>
+                    <h3>3、请默写所有多媒体音频，视频相关标签(5分)</h3>
+                    <p class="answer">embed、Source、audio、video、canvas</p>
+                </li>
+                <li>
+                    <h3>4、表格：请完成如下表格（5分）</h3>
+                    <img src="img/image04.jpg">
+                    <p class="answer">效果请点击：<a href="html/question04.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>5、列表：请完成下图效果(5分)</h3>
+                    <img src="img/image05.jpg">
+                    <p class="answer">效果请点击：<a href="html/question05.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>6、表单：请完成下图表单制作</h3>
+                    <h6>表单实战一：注意文字对齐</h6>
+                    <img src="img/image06-1.jpg">
+                    <p class="answer">效果请点击：<a href="html/question06-1.html" target="_blank">【传送门】</a></p>
+                    <h6>表单实战二：注意细节</h6>
+                    <img src="img/image06-2.jpg">
+                    <p class="answer">效果请点击：<a href="html/question06-2.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>7、请解释以下标签属性的作用(5分)</h3>
+                    <p class="answer"><span>title</span>：title标签为网页标题标签，搜索引擎在搜索页面时，会首先检索title中的内容，他会影响到网页在搜索引擎中的排名。</p>
+                    <p class="answer"><span>id</span>：id为任何元素的属性，该属性可以作为元素的唯一标识。</p>
+                    <p class="answer"><span>class</span>：class为任何元素的属性，该属性可以用来为不同的元素进行分组。</p>
+                    <p class="answer"><span>src</span>：src属性可以用来指定一个外部资源的路劲。</p>
+                    <p class="answer"><span>href</span>：href属性可以用来指向一个链接跳转的目标地址。</p>
+                    <p class="answer"><span>type="tel"</span>：type="tel"为HTML5中新增的智能表单属性，在移动端可以智能的选择虚拟键盘。</p>
+                    <p class="answer"><span>type="text/javascript"</span>：在浏览器解析页面时，该属性告诉浏览器该文本是一个类型为javascript的文本。</p>
+                    <p class="answer"><span>data-indx="66"</span>：该属性为HTML5 新增加的一项新功能“自定义数据属性” ，可以使用以 data- 为前缀来设置我们需要的自定义属性，来进行一些数据的存放。</p>
+                </li>
+            </ul>
+        </section>
+        <section id="second">
+            <h2>第二课：CSS基本概念</h2>
+            <ul>
+                <li>
+                    <h3>8、简要说明import和link二者的区别是。（5分）</h3>
+                    <div class="answer">
+                        <ul>
+                            <li>1、link属于html标签，而@import是CSS提供的；</li>
+                            <li>2、link引用CSS时，在页面加载时同时被加载，而@import引用的css需要等页面完全加载后再被加载；</li>
+                            <li>3、由于link是html标签，无兼容性问题，而@import只有在IE5以上浏览器中才能识别；</li>
+                            <li>4、@import可以在CSS文件中引入其他CSS文件，而link主要在html页面中引入CSS文件，和网页图标。</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>9、请回答以下单位的含义,并各举一个应用例子(5分)</h3>
+                    <p class="question">Px、em、rem、s、deg、rad</p>
+                    <div class="answer">
+                        <ul>
+                            <li>px：表示绝对长度单位。例如：width:100px;font-size:16px;</li>
+                            <li>em：表示相对长度单位，相对于当前对象内文本的字体尺寸， 1em=1font-size。例如：text-indent:2em;</li>
+                            <li>rem：表示相对长度单位，相对于根元素(即html元素)的字体大小，1rem=1font-size。例如：line-height:2em;</li>
+                            <li>s：表示时间单位。例如：transition-duration:1s;</li>
+                            <li>deg：表示角度单位。例如：transform:rotate(30deg);</li>
+                            <li>rad：表示角度单位，1π=180deg。例如：transform:rotate(1rad);</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>10、关于颜色表达问题(5分)</h3>
+                    <p class="question">颜色经常用16进制表达，或用常用单词，或用RGB、RGBA、HSL、HSLA这四种语法表达。请解释以上字母的含义，并分别各举一个应用案例。
+                    </p>
+                    <div class="answer">
+                        <ul>
+                            <li>RGB：表示通过对红(R)、绿(G)、蓝(B)三个颜色通道的变化以及它们相互之间的叠加来得到各式各样的颜色。例如：color:rgb(255,0,0);</li>
+                            <li>RGBA：和RGB模式相同，只是在RGB模式上增加了Alpha通道，也就是透明度。例如：background-color:rgba(255,255,0,0.5);</li>
+                            <li>HSL：表示通过对色相(H)、饱和度(S)、亮度(L)三个颜色通道的变化以及它们相互之间的叠加来得到各式各样的颜色。例如：color:hsl(0,50%,50%);</li>
+                            <li>HSLA：此色彩模式与HSL相同，只是在HSL模式上新增了Alpha透明度。例如：background-color:hsla(120,50%,100%,0.5);</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>11、CSS为什么叫层叠样式表？谈谈你的理解？（5分）</h3>
+                    <p class="answer">样式就是对网页中的元素（字体、段落、图像、列表等）属性的整体概括，即描述所有网页对象的显示形式（例如：文字的大小、字体、背景及图像的颜色、大小等都是样式）。层叠就是指当HTML文件引用多个CSS文件时，如果CSS文件之间所定义的样式发生了冲突，将依据层次的先后来处理其样式对内容的控制。</p>
+                </li>
+            </ul>
+        </section>
+        <section id="third">
+            <h2>第三课：CSS选择器</h2>
+            <ul>
+                <li>
+                    <h3>12、请默写你使用过的选择器要求不低于5个(5分)</h3>
+                    <p class="answer">①元素选择器：p；②id选择器：#name；③类选择器：.name；④伪类选择器：a:hover；⑤属性选择器：div[class="name"] ……</p>
+                </li>
+                <li>
+                    <h3>13、CSS优先级基础(10分)</h3>
+                    <p class="question">已知：Important  > 内联(行内) > ID > 类 | 伪类 | 属性选择器 > 标签 >通配符 > 继承  <br />
+                    请使用案例证明以上优先级关系。
+                    </p>
+                    <p class="answer">案例请点击：<a href="html/question13.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>14、特指度概念 (10分)</h3>
+                    <p class="question">
+                        特指度（specificity）： 特指度表示一个css选择器表达式的重要程度，可以通过一个公式来计算出一个数值，数越大，越重要。<br />
+                        这个计算叫做“I-C-E”计算公式：  <br />
+                        I —— Id； <br />
+                        C —— Class；<br />
+                        E —— Element；<br />
+                        即，针对一个css选择器表达式，遇到一个id就往特指度数值中加100，遇到一个class就往特指度数值中加10，遇到一个element就往特指度数值中加1。<br />
+                        <img src="img/image14.png" width="85%"> 
+                        请使用案例证明以上特指度权重。
+                    </p>
+                    <p class="answer">案例请点击：<a href="html/question14.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>15、优先级实战分析一(2分)</h3>
+                    <p class="question">请问下图代码中 大象 两个字是蓝色还是红色？为什么？</p>
+                    <img src="img/image15.jpg">
+                    <p class="answer"><a href="html/question15.html" target="_blank">【传送门】</a>大象这两个字是 <span style="color: blue">蓝色</span>，因为红色是通过父元素继承给大象的，而蓝色是元素选择器b设置给大象的</p>
+                </li>
+                <li>
+                    <h3>16、优先级实战分析二(2分)</h3>
+                    <p class="question">请问：下面代码中的 大象 为绿色还是红色，为什么？</p>
+                    <img src="img/image16.jpg">
+                    <p class="answer"><a href="html/question16.html" target="_blank">【传送门】</a>大象这两个字是<span style="color: red">红色</span>，因为 #box li的特指度为101，而ul li的特指度为2</p>
+                </li>
+                <li>
+                    <h3>17、优先级实战分析三(2分)</h3>
+                    <p class="question">请分析： 下图代码中 冬瓜皮，西瓜皮，南瓜皮 分别会是什么颜色？</p>
+                    <img src="img/image17.jpg">
+                    <p class="answer"><a href="html/question17.html" target="_blank">【传送门】</a>冬瓜皮为<span style="color: black">黑色</span>，西瓜皮为<span style="color: red">红色</span>，南瓜皮为<span style="color: blue">蓝色</span>，因为选择器.box .cl表示类名为.box元素下的类名为.cl的子元素，因为选择器.box.cl表示类名同时为.box和.cl的元素，对于冬瓜皮没有设置样式，使用默认样式，西瓜皮被选择器.box .cl选中，故为红色，南瓜皮被选择器.box.cl选中，故为蓝色。</p>
+                </li>
+                <li>
+                    <h3>18、优先级实战分析四(2分)</h3>
+                    <p class="question">请分析解答下面两个input框内文字颜色</p>
+                    <img src="img/image18-1.png">
+                    <p class="answer"><a href="html/question18-1.html" target="_blank">【传送门】</a>第一个框为<span style="color: yellow">黄色</span>，第二个框为<span style="color: red">红色</span>，因为选择器input [type="text"]表示input元素下的子元素，.input选择器表示类名为.input的元素，而选择器[type="password"]表示有属性type且值为password，有因为该选择器在.input选择器的后面，故第一个框为黄色，第二个框为红色</p>
+                    <p class="question">上图第一个如果改成如下所示结果又会如何？</p>
+                    <img src="img/image18-2.png">
+                    <p class="answer"><a href="html/question18-2.html" target="_blank">【传送门】</a>第一个框为<span style="color: blue">蓝色</span>，第二个框为<span style="color: red">红色</span>，因为input[type="text"]表示具有属性type且值为text的input元素，他的特指度为11，而.input选择器的特指度为10，故第一个框为蓝色。</p>
+                </li>
+                <li>
+                    <h3>19、优先级实战分析五(2分)</h3>
+                    <p class="question">请分析解答下图中 大象 是红色还是蓝色？为什么？</p>
+                    <img src="img/image19-1.png">
+                    <p class="answer"><a href="html/question19-1.html" target="_blank">【传送门】</a>大象两个字为<span style="color: red">红色</span>，因为这两个选择器的特指度都是101，红色的选择器在后面。</p>
+                    <p class="question">如果改成下图，大象会是什么颜色呢？</p>
+                    <img src="img/image19-2.png">
+                    <p class="answer"><a href="html/question15.html" target="_blank">【传送门】</a>大象两个字为<span style="color: blue">蓝色</span>，因为这两个选择器的特指度都是101，蓝色的选择器在后面。</p>
+                </li>
+                <li>
+                    <h3>20、优先级实战分析六(2分)</h3>
+                    <p class="question">分析下图代码中，大象的颜色</p>
+                    <img src="img/image20.png">
+                    <p class="answer"><a href="html/question20.html" target="_blank">【传送门】</a>大象两个字为<span style="color: blue">蓝色</span>，因为!important的优先级最高，且蓝色的选择器在红色的后面。</p>
+                </li>
+                <li>
+                    <h3>21、优先级实战分析七(2分)</h3>
+                    <p class="question">请分析冬瓜皮与西瓜皮文字的颜色</p>
+                    <img src="img/image21.png">
+                    <p class="answer"><a href="html/question21.html" target="_blank">【传送门】</a>冬瓜皮<span style="color: blue">蓝色</span>，西瓜皮为<span style="color: black">黑色</span>，因为#ids.box.cls选择器表示同时具有id名为ids和类名为box和cls的元素，特指度为120，div#ids.box选择器表示同时具有具有id名为ids和类名为box的div元素，特指度为111，故冬瓜皮为蓝色，西瓜皮为黑色。</p>
+                </li>
+                <li>
+                    <h3>22、优先级实战分析八(2分)</h3>
+                    <img src="img/image22-1.png">
+                    <p class="answer"><a href="html/question22-1.html" target="_blank">【传送门】</a>鼠标放上去是文字是<span style="color: blue">蓝色</span>的，因为#bl选择器的特指度为100，而a:hover选择器的特指度为11。</p>
+                    <p class="question">如果代码改进如下结果会是什么？</p>
+                    <img src="img/image22-2.png">
+                    <p class="answer"><a href="html/question22-2.html" target="_blank">【传送门】</a>鼠标放上去是文字是<span style="color: red">红色</span>，因为a:hover#bl选择器的特指度为111。</p>
+                </li>
+                <li>
+                    <h3>23、选择器实战训练题(2分)</h3>
+                    <p class="question">请使用最少的css代码，让所有 1 变成红色。</p>
+                    <img src="img/image23.png">
+                    <p class="answer"><a href="html/question23.html" target="_blank">【传送门】</a>li:nth-of-type(odd) {color: red;}</p>
+                </li>
+                <li>
+                    <h3>24、 :target选择器实战 (5分)</h3>
+                    <img src="img/image24.png">
+                    <p class="answer"><a href="html/question24.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>25、综合选择器实战分析(2分)</h3>
+                    <img src="img/image25.png">
+                    <p class="answer"><a href="html/question25.html" target="_blank">【传送门】</a>鼠标放上去子菜单不会显示，因为a:hover .sub表示a元素的子标签，而子菜单是a元素的兄弟元素，应使用a:hover+.sub选择器。</p>
+                </li>
+                <li>
+                    <h3>26、属性选择器实战分析(2分)</h3>
+                    <p class="question">请解释以下代码含义，并说说你使用过的属性选择器不低于3个</p>
+                    <img src="img/image26.png">
+                    <p class="answer"><a href="html/question26.html" target="_blank">【传送门】</a>[class^="col"]选择器表示含有class属性且属性值以col开头的元素。<br />[class]表示含有class属性的元素，[class="col-1"]表示含有属性class且属性值为col-1，[class&="aa"]表示含有class属性且属性值以aa结尾的元素，[class*="a"]表示含有class属性且属性值中含有a的元素。</p>
+                </li>
+                <li>
+                    <h3>27、伪元素选择器(5分)</h3>
+                    <p class="question">请使用 after与before伪元素选择器各做一个简单案例(自由发挥)，并解析下你对伪元素选择器的理解。
+                    </p>
+                    <p class="answer"><a href="html/question27.html" target="_blank">【传送门】</a>伪元素表示的是元素中的特殊位置，:before表示元素的最前边的位置，:after表示元素的最后边的位置。</p>
+                </li>
+            </ul>
+        </section>
+        <section id="fourth">
+            <h2>第四课：边框与边距</h2>
+            <ul>
+                <li>
+                    <h3>28、border基础(2分)</h3>
+                    <p class="question">请解释以下border相关代码的含义</p>
+                    <img src="img/image28.png">
+                    <div class="answer">
+                        <a href="html/question28.html" target="_blank">【传送门】</a><br />
+                        <ul>
+                            <li>border: 5px solid blue; 表示给元素四条边框设置为蓝色的实线型5px宽。</li>
+                            <li>border-color: red green blue transparent; 表示给元素的边框设置颜色，分别为上边框是红色，右边框是绿色，下边框是蓝色，左边框为透明色。</li>
+                            <li>border-top-width: 10px; 表示单独给上边框的宽度设置为10px。</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>29、Border-radius基础(5分)</h3>
+                    <p class="question">请解释下面代码含义及运行结果情况</p>
+                    <img src="img/image29.png">
+                    <div class="answer">
+                        <a href="html/question29.html" target="_blank">【传送门】</a>
+                        <ul>
+                            <li>
+                                border-bottom: 50px red solid; 表示给下边框设置为50px宽红色实线型</li>
+                            <li>border-radius: 200%/200%; 表示设置圆角边框，水平方向和垂直方向均设置200%</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>30、Border相关实战题目 (30分)</h3>
+                    <p class="question">请使用CSS3绘制以下图形</p>
+                    <img src="img/image30.png">
+                    <p class="answer">效果请点击：<a href="html/question30.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>31、外边距语法基础，解释以下代码含义（2分）</h3>
+                    <img src="img/image31.png">
+                    <div class="answer">
+                        <ul>
+                            <li>margin: 10px 20px 30px 40px; 表示设置四个方向的外边距，分别表示上外边距10px，右外边距20px，下外边距30px，左外边距40px；</li>
+                            <li>margin: 10px 20px 30px; 表示设置四个方向的外边距，分别表示上外边距10px，左右外边距20px，下外边距30px；</li>
+                            <li>margin: 10px 20px; 表示设置四个方向的外边距，分别表示上下外边距10px，左右外边距20px；</li>
+                            <li>margin: 10px; 表示设置四个方向的外边距，四个方向的外边距均为10px；</li>
+                            <li>margin: -10px -20px -30px -40px; 表示设置四个方向的外边距，分别表示上外边距-10px，右外边距-20px，下外边距-30px，左外边距-40px；</li>
+                            <li>margin: 0px auto; 表示上下外边距0px，左右外边距最大；</li>
+                            <li>margin: auto; 表示上下左右外边距均为auto；</li>
+                            <li>margin-top: 30px; 表示上外边距30px；</li>
+                            <li>margin-right: 20px; 表示右外边距20px。</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h3>32、边距实战题 (2分)</h3>
+                    <p class="question">写一个div要求宽度300px,高度100px,背景：蓝色,左右自动居中（浏览器拉大拉下都能左右居中，以后称为自适应居中）</p>
+                    <p class="answer"><a href="html/question32.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>33、Padding基础 (2分)</h3>
+                    <img src="img/image33.png">
+                    <p class="answer"><a href="html/question33.html" target="_blank">【传送门】</a>文字不会与边框相交，因为padding不允许为负值，该属性无效。</p>
+                </li>
+                <li>
+                    <h3>34、margin与行内元素（3分）</h3>
+                    <p class="question">对行内元素span设置margin-top 和margin-bottom是否起作用？ </p>
+                    <p class="answer"><a href="html/question34.html" target="_blank">【传送门】</a>内联元素可以设置上下外边距，但是不会影响页面布局</p>
+                </li>
+                <li>
+                    <h3>35、Padding与行内元素(3分)</h3>
+                    <p class="question">对行行内span元素设置padding:10px  10px; 它占用空间会不会变大？</p>
+                    <p class="answer"><a href="html/question35.html" target="_blank">【传送门】</a>内联元素可以设置左右外边距，并且它占用空间会变大</p>
+                </li>
+                <li>
+                    <h3>36、什么情况下会出现两个元素边距重叠（或叫边距塌陷）（10分）</h3>
+                    <p class="question">请给出3种以上，解决边距塌陷的方法。</p>
+                    <p class="answer"><a href="html/question36.html" target="_blank">【传送门】</a>垂直方向相邻的外边距会发生重叠。</p>
+                </li>
+                <li>
+                    <h3>37、看图回答(2分)</h3>
+                    <img src="img/image37.png">
+                    <p class="answer"><a href="html/question37.html" target="_blank">【传送门】</a>div的margin值为30px。 因为普通元素margin值为百分比的时候是参照其包含块 width 进行计算</p>
+                </li>
+            </ul>
+        </section>
+        <section id="fifth">
+            <h2>第五课：弹性盒子模型与显示模式</h2>
+            <ul>
+                <li>
+                    <h3>38、基础盒子模型概念（3分）</h3>
+                    <img src="img/image38-1.png">
+                    <p class="question">基础盒子模型彩色图：</p>
+                    <img src="img/image38-2.png">
+                    <p class="question">w3c 基础盒子模型的范围包括 margin、border、padding、content，并且 content 部分不包含其他部分。默认的width和height指内容区域。</p>
+                    <p class="question">盒子模型占用空间 = content区域 + padding区域+border区域+margin区域
+                    特别注意：盒子模型规则对行内（内联）元素不都有效，注意针对块状与行内块状布局使用。</p>
+                    <p class="question">盒子模型图二：</p>
+                    <img src="img/image38-3.png">
+                    <p class="question">题目：请说说图二与图一的区别？请用代码实现两种模型方案。</p>
+                    <p class="answer"><a href="html/question38.html" target="_blank">【传送门】</a>它们的区别主要在于图一中的width和height仅包括内容区域，而图二中的width和height不仅包括内容区域还包括了内边距和边框；只要给元素设置一个“box-sizing: border-box;”，即可将W3C规定的基础盒子模型转换为第二种模型</p>
+                </li>
+                <li>
+                    <h3>39、最小与最大宽度及高度实战操作（2分）</h3>
+                    <p class="question">请完成一个div最大宽度1200px，最小宽度1000px,最大高度600px, 最小高度：300px;  背景：蓝色</p>
+                    <p class="answer"><a href="html/question39.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>40、以下盒子占用空间是多少？（2分）</h3>
+                    <img src="img/image40.png">
+                    <p class="answer"><a href="html/question40.html" target="_blank">【传送门】</a>当浏览器的窗口（body内容区）宽度超过900px时，这个div的宽度始终为900px，当浏览器的窗口宽度小于600px时，这个div的宽度始终为600px，而当浏览器的窗口宽度介于600px到900px之间时，这个div的宽度为body的100%；当div的后代元素的高超过500px时，这个div的高始终为500px，当div的后代元素的高低于300px时，这个div的高始终为300px，当div的后代元素的高介于300px到500px时，div的高等于后代元素的高。</p>
+                </li>
+                <li>
+                    <h3>41、请简要说明display: none;与overflow: hidden;的区别（3分）</h3>
+                    <p class="answer"><a href="html/question41.html" target="_blank">【传送门】</a>display: none;是将给元素给隐藏，并且不占用空间；而overflow: hidden;是将超出该元素内容区的后代元素隐藏</p>
+                </li>
+                <li>
+                    <h3>42、行内元素转换成块状元素(1分)</h3>
+                    <p class="question">如何让一个span宽度100像素，高度100像素,背景蓝色，并且换行。</p>
+                    <p class="answer"><a href="html/question42.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>43、快速元素转换成行内块状(1分)</h3>
+                    <p class="question">如何让一个div根据内容大小自动变化大小，也可以用width指定尺寸。</p>
+                    <p class="answer"><a href="html/question43.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>44、Flex弹性盒模型(3分)</h3>
+                    <p class="question">请解释以下代码，并回答下图代码呈现的效果</p>
+                    <img src="img/image44.png">
+                    <p class="answer"><a href="html/question44.html" target="_blank">【传送门】</a>display: flex;将ul设置为Flex弹性盒模型，flex-direction: row;
+            flex-direction: row-reverse;创建主轴方向</p>
+                </li>
+                <li>
+                    <h3>45、box-shadow盒子阴影实战（5分）</h3>
+                    <p class="question">请写出盒子阴影的语法格式，并完成如下图类似盒子阴影。</p>
+                    <img src="img/image45.png">
+                    <p class="answer"><a href="html/question45.html" target="_blank">【传送门】</a></p>
+                </li>
+            </ul>
+        </section>
+        <section id="sixth">
+            <h2>第六课：背景与背景定位</h2>
+            <ul>
+                <li>
+                    <h3>46、背景定位主流实战题(10分)</h3>
+                    <p class="question">已知设计师提供有如下两个图片</p>
+                    <img src="img/image46-1.png">
+                    <img src="img/image46-2.png">
+                    <p class="question">请完成如下效果：（就是鼠标放上去是蓝色，移开是灰色）</p>
+                    <img src="img/image46-3.png">
+                    <p class="answer"><a href="html/question46.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>47、背景渐变(5分)</h3>
+                    <p class="question">只使用css3制作一个如图所示自适应满屏渐变效果</p>
+                    <img src="img/image47.png">
+                    <p class="answer"><a href="html/question47.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>48、多重背景应用题（5分）</h3>
+                    <p class="question">请简单实现一个具有两张背景图的div.一张定位到左上角，一张定位到右下角。</p>
+                    <p class="answer"><a href="html/question48.html" target="_blank">【传送门】</a></p>
+                </li>
+            </ul>
+        </section>
+        <section id="seventh">
+            <h2>第七课：文本修饰</h2>
+            <ul>
+                <li>
+                    <h3>49、请写出5个以上与文本相关的css属性例如：粗细，颜色（5分）</h3>
+                    <p class="answer"><a href="html/question49.html" target="_blank">【传送门】</a>font-size: 16px;color: #F40;font-family: "Microsoft YaHei";font-weight: normal;font-style: italic;font-variant: small-caps;……</p>
+                </li>
+                <li>
+                    <h3>50、Font综合写法代码解释题（5分）</h3>
+                    <p class="question">请解释以下代码含义。</p>
+                    <p class="question">font: 14px/1.5  'Microsoft yahei',\5b8b\4f53,sans-serif;</p>
+                    <p class="answer">这是字体font属性的综合书写模式，14px/1.5表示的是字体大小14px行高为1.5倍；'Microsoft yahei',\5b8b\4f53,sans-serif;表示文本字体，浏览器会先读取第一个字体，如果在计算机上没有会读取第二种，以此类推，如果定义的字体都没有，则按默认的字体。</p>
+                </li>
+                <li>
+                    <h3>51、vertical-align实战应用(2分)</h3>
+                    <p class="question">当一个div中有一个 input复选框，一个b标签里面文字为全选，文字比较大。这个时候经常会不能对齐，一般都通过vertical-align来实现水平对齐，请给出你的代码。</p>
+                    <img src="img/image51.png">
+                    <p class="answer"><a href="html/question51.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>52、文本居中对齐(10分)</h3>
+                    <p class="question">已经给出html代码，请只写css完成如下图效果：</p>
+                    <img src="img/image52-1.png">
+                    <pre>
+                        <code>
+    &lt;ul&gt; 
+        &lt;li&gt;首页&lt;/li&gt; 
+        &lt;li&gt;产品中心&lt;/li&gt; 
+        &lt;li&gt;关于我们&lt;/li&gt; 
+    &lt;/ul&gt;            </code>
+                    </pre>
+                    <p class="answer"><a href="html/question52-1.html" target="_blank">【传送门】</a></p>
+                    <p class="question">继续改进CSS实现如下图</p>
+                    <img src="img/image52-2.png">
+                    <p class="question">就是无论浏览器放大缩小，都让三个导航按钮，居中。下面的线条自适应与浏览器一样宽。</p>
+                    <p class="answer"><a href="html/question52-2.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>53、分页效果制作(10分)</h3>
+                    <p class="question">如下图：是一个常见的分页按钮功能。但是分页的两个箭头之间显示个数不固定。例如：目前是5个，也可以能只有3个或有7个。</p>
+                    <p class="question">如何保证整个分页按钮整体位于浏览器中间。</p>
+                    <img src="img/image53.png">
+                    <p class="question">换句话描述就是：没有指定宽度的div， 如何做到左右居中？</p>
+                    <p class="answer"><a href="html/question53.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+                <li>
+                    <h3>54、文本修饰（5分）</h3>
+                    <p class="question">给定HTML代码(注意不要修改html代码)，只添加CSS代码实现如图所示效果。</p>
+                    <img src="img/image54.png">
+                    <p class="question">HTML代码如下：</p>
+                    <pre>
+                        <code>
+    &lt;ul&gt;
+        &lt;li&gt;AA&lt;/li&gt;
+        &lt;li&gt;BB&lt;/li&gt;
+        &lt;li&gt;CC&lt;/li&gt;
+        &lt;li&gt;DD&lt;/li&gt;
+        &lt;li&gt;EE&lt;/li&gt;
+    &lt;/ul&gt;         </code>
+                    </pre>
+                    <p class="answer"><a href="html/question54.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>55、文本处理letter-spacing与word-spacing（5分）</h3>
+                    <p class="question">一个英文网站的侧边栏，单词过长，期望换行，请用css实现。</p>
+                    <img src="img/image55-1.png">
+                    <p class="answer"><a href="html/question55-1.html" target="_blank">【传送门】</a></p>
+                    <p class="question">题目二给定HTML代码如下：</p>
+                    <pre>
+                        <code>
+    &lt;div&gt;姓  名：&lt;input type="text" /&gt; &lt;/div&gt;
+    &lt;div&gt;银行卡号：&lt;input type="text" /&gt; &lt;/div&gt; </code>
+                    </pre>
+                    <p class="question">请使用CSS完成如下图效果布局</p>
+                    <img src="img/image55-2.png">
+                    <p class="answer"><a href="html/question55-2.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>56、文本阴影（5分）</h3>
+                    <p class="question">请实现：冬瓜皮 几个字并给其加上一个，阴影。</p>
+                    <p class="answer"><a href="html/question56.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>57、文本溢出显示省略号（5分）</h3>
+                    <img src="img/image57.png">
+                    <p class="answer"><a href="html/question57.html" target="_blank">【传送门】</a></p>
+                </li>
+            </ul>
+        </section>
+        <section id="eighth">
+            <h2>第八课：浮动与定位</h2>
+            <ul>
+                <li>
+                    <h3>58、浮动基本语法（2分）</h3>
+                    <p class="question">请解释下代码含义</p>
+                    <p class="answer"><span>Float:left</span>：元素向页面左侧浮动</p>
+                    <p class="answer"><span>Float:right</span>：元素向页面右侧浮动</p>
+                    <p class="answer"><span>Clear:both</span>：清除两侧浮动元素对当前元素的影响</p>
+                    <p class="answer"><span>Clear:left</span>：清除左侧浮动元素对当前元素的影响</p>
+                    <p class="answer"><span>Clear:right</span>：清除右侧浮动元素对当前元素的影响</p>
+                </li>
+                <li>
+                    <h3>59、文字环绕图片实战（2分）</h3>
+                    <p class="question">请完成如下图所示文字环绕图片效果。</p>
+                    <img src="img/image59.png">
+                    <p class="answer"><a href="html/question59.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>60、用浮动实现首字下沉效果（5分）</h3>
+                    <img src="img/image60.png">
+                    <p class="answer"><a href="html/question60.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>61、浮动塌陷及解决方案题（15分）</h3>
+                    <p class="question">请问什么情况下会出现浮动塌陷？如何解决浮动塌陷？</p>
+                    <p class="answer"><a href="html/question61.html" target="_blank">【传送门】</a>在文档流中，当父元素未指定高度时，父元素的高度又子元素撑开，但当子元素设置了浮动后，会脱离文档流，此时导致子元素无法撑起父元素，导致父元素的高度塌陷。<br />
+                    常用解决方案： 1.为父元素指定高度；2.给父元素设置为一个非visible的值；3.在浮动子元素后面添加一个空的div，并设置清除浮动。</p>
+                </li>
+                <li>
+                    <h3>62、定位参考物问题（5分）</h3>
+                    <p class="question">请问绝对定位的参考物是什么？</p>
+                    <p class="question">相对定位的参考物是什么？</p>
+                    <p class="question">固定定位的参考物是什么？</p>
+                    <p class="answer"><a href="html/question62.html" target="_blank">【传送门】</a><br />
+                    1、绝对定位的参考物是离它最近的开启了定位的祖先元素，如果所有的祖先元素都没有开启定位，则参考物是浏览器窗口；<br />
+                    2、相对定位的参考物是该元素在文档流中原来的位置；<br />
+                    3、固定定位的参考物是浏览器窗口。</p>
+                </li>
+                <li>
+                    <h3>63、Z-index问题（5分）</h3>
+                    <p class="question">z-index的作用和取值范围是多少？</p>
+                    <p class="question">非定位元素和z-index一同使用有效吗？</p>
+                    <p class="answer"><a href="html/question63.html" target="_blank">【传送门】</a>通过z-index属性可以对设置了定位耳朵元素设置元素层级，z-index可以取正整数，值越大，层级越高，越优先显示；但对于没有开启定位的元素会忽略z-index的属性。</p>
+                </li>
+                <li>
+                    <h3>64、定位与top\left\right\bottom综合实战（10分）</h3>
+                    <p class="question">一、 top\left\right\bottom四个值只能和定位元素一起使用对吗？</p>
+                    <p class="question">二、请使用定位实现一个自适应满屏的蓝色背景（浏览器拉大拉小都是满屏）</p>
+                    <p class="question">三、请使用定位与margin:auto配合实现一个宽度 300像素高200像素的di自适应居中。</p>
+                    <p class="answer"><a href="html/question64.html" target="_blank">【传送门】</a>对于没有设置定位的元素，使用top\left\right\bottom四个值会被忽略该属性</p>
+                </li>
+                <li>
+                    <h3>65、定位与浮动(10分)</h3>
+                    <p class="question">绝对定位元素是否受浮动影响？</p>
+                    <p class="question">相对定位元素是否受到浮动影响？</p>
+                    <p class="answer"><a href="html/question65.html" target="_blank">【传送门】</a>绝对定位元素不受浮动的影响，但相对定位元素会受浮动的影响，因为绝对定位的元素会脱离文档流，而相对定位的元素不会脱离文档流</p>
+                </li>
+                <li>
+                    <h3>66、用CSS3实现奥运五环(10分)</h3>
+                    <p class="question">请实现如下图所示的奥运五环</p>
+                    <img src="img/image66.png">
+                    <p class="answer"><a href="html/question66.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>67、定位实现多级导航菜单(20分)</h3>
+                    <p class="question">实现如下图类似的多级导航</p>
+                    <img src="img/image67.png">
+                    <p class="answer"><a href="html/question67.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+            </ul>
+        </section>        
+        <section id="ninth">
+            <h2>第九课：transition动画</h2>
+            <ul>
+                <li>
+                    <h3>68、Transition代码解释(5分)</h3>
+                    <p class="question">请解释以下语法的含义</p>
+                    <p class="question">transition: property  duration  timing-function  delay;</p>
+                    <p class="answer">property表示过渡的CSS属性，duration表示完成过渡所需要的时间，timing-function表示过渡函数，delay表示过渡开始出现的延迟时间。</p>
+                </li>
+                <li>
+                    <h3>69、Transition实战效果导航案例(10分)</h3>
+                    <p class="question">使用transition完成如下所示动画效果</p>
+                    <img src="img/image69.png">
+                    <p class="answer"><a href="html/question69.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>70、Transition-steps爬楼梯实战(5分)</h3>
+                    <p class="question">使用transition的steps方法实现下图效果</p>
+                    <img src="img/image70.png">
+                    <p class="answer"><a href="html/question70.html" target="_blank">【传送门】</a></p>
+                </li>
+            </ul>
+        </section>
+        <section id="tenth">
+            <h2>第十课：TransForm变换</h2>
+            <ul>
+                <li>
+                    <h3>71、Transform实战旋转与缩放案例效果(10分)</h3>
+                    <p class="question">请完成：鼠标放上去旋转和放大缩小的图片</p>
+                    <img src="img/image71.png">
+                    <p class="answer"><a href="html/question71.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>72、Transform多边形与旋转缩放实战案例效果(20分) </h3>
+                    <p class="question">请完成如下图所示案例效果</p>
+                    <img src="img/image72.png">
+                    <p class="answer"><a href="html/question72.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>73、3D效果-六面体实战(10分) </h3>
+                    <p class="question">请使用CSS3完成如下图类似的六面体</p>
+                    <img src="img/image73.png">
+                    <p class="answer"><a href="html/question73.html" target="_blank">【传送门】</a></p>
+                </li>
+            </ul>
+        </section>
+        <section id="eleventh">
+            <h2>第十一课：animation及CSS3动画综合</h2>
+            <ul>
+                <li>
+                    <h3>74、Animation动画效果之涟漪效果实战（10分）</h3>
+                    <p class="question">实战背景：是阿里云的业务范围做的很酷炫。向振幅效果也向涟漪效果。</p>
+                    <img src="img/image74.png">
+                    <p class="question">案例效果<a href="http://dx.phpdl.com/demo/transform/04/" target="_blank">参考链接</a></p>
+                    <p class="answer"><a href="html/question74.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>75、纯CSS3实现如下效果的无缝滚动图组（10分）</h3>
+                    <p class="question">具体打开参考<a href="http://dx.phpdl.com/demo/transform/05/" target="_blank">案例链接</a>查看：</p>
+                    <p class="answer"><a href="html/question75.html" target="_blank">【传送门】</a></p>
+                </li>
+                <li>
+                    <h3>76、纯CSS3实现行走的人物（30分）</h3>
+                    <p class="question">以下几个30分题目，进阶选做题目，不会的可以跳过，做好的会给予优秀推。荐此创意来自国外，综合css3能力素质训练题目非常棒，大象老以将此案例作为教学实战案例之一。训练后的同学效果非常好，看到网页css都说easy了。请你使用CSS3+图片素材实现如下效果：</p>
+                    <img src="img/image76.png">
+                    <p class="question">案例效果<a href="http://www.phpdl.com/demo/walk/index.html" target="_blank">参考链接</a></p>
+                    <p class="answer"><a href="html/question.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+                 <li>
+                    <h3>77、纯CSS3绘制奔跑的大象（30分）</h3>
+                    <p class="question">此创意来自国外，大象老师刚好发现跟自己名字温和就采取作为CSS3教学案例，此案例可以对同学们css基本功进行全面综合提高训练。</p>
+                    <img src="img/image77.png">
+                    <p class="question">案例效果<a href="http://dx.phpdl.com/demo/transform/03/" target="_blank">参考链接</a></p>
+                    <p class="answer"><a href="html/question.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+                <li>
+                    <h3>78、纯CSS3配合JS实现晃动banner图片效果（30分）</h3>
+                    <p class="question">应用背景：阿里云banner效果图，大象老师感觉不错吸纳为教学案例。请模仿实现如下效果：</p>
+                    <img src="img/image78.png">
+                    <p class="question">案例效果<a href=" http://dx.phpdl.com/demo/transform/06/ " target="_blank">参考链接</a></p>
+                    <p class="answer"><a href="html/question.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+            </ul>
+        </section>
+        <section id="twelfth">
+            <h2>第十二课：媒体查询响应式与自适应</h2>
+            <ul>
+                <li>
+                    <h3>79、请解释以下代码含义（10分）</h3>
+                    <p class="question">&lt;meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /&gt; </p>
+                    <p class="answer">width - 可视区域的宽度，值可为数字或关键词device-width；
+                        initial-scale - 初始的缩放比例；
+                        minimum-scale - 允许用户缩放到的最小比例；
+                        maximum-scale - 允许用户缩放到的最大比例；
+                        user-scalable - 用户是否可以手动缩放。</p>
+                </li>
+                <li>
+                    <h3>80、请用css实现自适应网页（10分）</h3>
+                    <p class="question">要求：浏览器宽度低于800时候，显示蓝色背景，800-1000时候显示红色背景,1000-1200显示绿色背景</p>
+                    <p class="answer"><a href="html/question80.html" target="_blank">【传送门】</a></p>
+                </li>
+            </ul>
+        </section>
+        <section id="thirteenth">
+            <h2>第十三课：其他综合</h2>
+            <ul>
+                <li>
+                    <h3>81、ICONFONT问题考察（10分）</h3>
+                    <p class="question">请简要说明下ICONFont与小图片对比优缺点。</p>
+                    <p class="answer">一个图标字体比一系列的图像要小；图标字体可以用过font-size属性设置大小，能够随时输出不同大小的图标；文字效果可以很容易地应用到图标上，包括颜色、阴影和翻转等效果。</p>
+                </li>
+                <li>
+                    <h3>82、自定义字体解释以下代码的含义(10分)</h3>
+                    <pre>
+                        <code>
+@font-face {
+font-family: 'YourWebFontName';
+src: url('YourWebFontName.eot?#iefix') format('eot');/*IE*/
+src: url('YourWebFontName.woff') format('woff'), 
+url('YourWebFontName.ttf') format('truetype');/*non-IE*/
+}
+
+@font-face {
+font-family: 'YourWebFontName';
+src: url('YourWebFontName.eot');/* IE9 Compat Modes */
+src: url('YourWebFontName.eot?#iefix') format('embedded-opentype'),/* IE6-IE8 */
+url('YourWebFontName.woff') format('woff'), /* Modern Browsers */
+url('YourWebFontName.ttf') format('truetype'), /* Safari, Android, iOS */
+url('YourWebFontName.svg#YourWebFontName') format('svg');/* Legacy iOS */
+}</code>
+                    </pre>
+                    <p class="answer">未完成……</p>
+                </li>
+                <li>
+                    <h3>83、BFC\IFC问题(10分)</h3>
+                    <p class="question">请简要说明对BFC和IFC的理解</p>
+                    <p class="answer"></p>
+                </li>
+                <li>
+                    <h3>84、BFC实操题目（20分）</h3>
+                    <pre>
+一、已知BFC布局规则：
+1、内部的Box会在垂直方向，一个接一个地放置。
+2、Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+3、每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+4、BFC的区域不会与float box重叠。
+5、BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+6、计算BFC的高度时，浮动元素也参与计算
+
+二、以下情况会创建BFC
+1、根元素
+2、float属性不为none
+3、position为absolute或fixed
+4、display为inline-block, table-cell, table-caption, flex, inline-flex
+5、overflow不为visible
+                    </pre>
+                    <p class="question">请用代码实例验证每一个规则，效果。</p>
+                    <p class="answer"><a href="html/question.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+                <li>
+                    <h3>85、 CSS预编译器(5分)</h3>
+                    <p class="question">你使用哪些CSS预编译语言？简要说说他们的优缺点。</p>
+                    <p class="answer"><a href="html/question.html" target="_blank">【传送门】</a>未完成……</p>
+                </li>
+            </ul>
+        </section>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第十课：TransForm变换</title>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .one {
+            width: 220px;
+            height: 220px;
+            margin: 0px auto;
+            background: url(../img/bg71-1.jpg) no-repeat;
+            border-radius: 50%;
+            transition: 1s;
+        }
+
+        .one:hover {
+            transform: rotateZ(360deg);
+        }
+
+        .two {
+            width: 360px;
+            height: 200px;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+
+        .two img {
+            width: 360px;
+            transition: 1s;
+        }
+
+        .two:hover img {
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+   
+    <h1>鼠标悬停背景做360°旋转效果</h1>
+
+    <div class="one"></div>
+
+    <h1>鼠标越过放大缩小</h1>
+
+    <div class="two"><img src="../img/bg71-2.jpg"></div>
+
+</body>
+
+</html>

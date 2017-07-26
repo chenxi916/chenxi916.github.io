@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font: 14px "microsoft yahei";
+    }
+    
+    .sign-up {
+        width: 400px;
+        background-color: #2176C9;
+        margin: 50px auto 0;
+        padding: 16px;
+    }
+    
+    .main {
+        width: 318px;
+        border: 1px solid #D9E1E5;
+        border-radius: 5px;
+        padding: 20px 40px;
+        background-color: #FFF;
+    }
+    
+    .type {
+        overflow: hidden;
+    }
+    
+    .main .type p {
+        width: 50%;
+        font-size: 16px;
+        line-height: 46px;
+        text-align: center;
+        float: left;
+    }
+    
+    .phone {
+        color: #009AFF;
+        border-bottom: 3px solid #009AFF;
+    }
+    
+    .mail {
+        color: #333;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #D9E1E5;
+    }
+    
+    .main .info {
+        padding: 20px 0px 23px;
+        border-bottom: 1px solid #D9E1E5;
+    }
+    
+    .info ul {
+        list-style: none;
+    }
+    
+    .info li {
+        margin-bottom: 24px;
+    }
+    
+    .info li input {
+        width: 100%;
+        height: 38px;
+        border-radius: 5px;
+        border: 1px solid #D9E1E5;
+        padding-left: 32px;
+        box-sizing: border-box;
+        background: url(../img/bg06-2.png) no-repeat 5px 11px;
+    }
+    
+    .info li input:focus{
+    	box-shadow:0px 0px 2px #009AFF;
+    }
+
+    .info li:nth-of-type(2) input,
+    .info li:nth-of-type(3) input {
+        width: 50%;
+        background: url(../img/bg06-2.png) no-repeat 5px -28px;
+    }
+    
+    .info li:nth-of-type(4) input {
+        background: url(../img/bg06-2.png) no-repeat 5px -65px;
+    }
+    
+    .info li:nth-of-type(2) img {
+        float: right;
+    }
+    
+    .info li:nth-of-type(3) button {
+        float: right;
+        width: 128px;
+        text-align: center;
+        color: #009AFF;
+        line-height: 36px;
+        border-radius: 3px;
+        border: 1px solid #009AFF;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .info li:last-of-type button {
+        width: 100%;
+        height: 44px;
+        border-radius: 5px;
+        border: 1px solid #D9E1E5;
+        background-color: #009AFF;
+        font-size: 18px;
+        color: #FFF;
+        cursor: pointer;
+    }
+    
+    .info p {
+        color: #424451;
+        text-align: center;
+    }
+    
+    .info p a {
+        color: #009AFF;
+    }
+    
+    .main .sign-in {
+        width: 87px;
+        padding-left: 30px;
+        font: 12px/22px "microsoft yahei";
+        border-radius: 1px;
+        border: 1px solid #81A8C4;
+        background: #007DCB url(../img/bg06-2.png) no-repeat 0 -103px;
+        margin: 16px 0 10px;
+    }
+    
+    .main .sign-in a {
+        text-decoration: none;
+        color: #FFF;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="sign-up">
+        <div class="main">
+            <div class="type">
+                <p class=phone>手机注册</p>
+                <p class=mail>QQ邮箱注册</p>
+            </div>
+            <div class="info">
+                <form action="#">
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="手机号" />
+                        </li>
+                        <li>
+                            <input type="text" placeholder="输入右侧验证码" />
+                            <img src="../img/image06-3.png">
+                        </li>
+                        <li>
+                            <button type="button">获取短信验证码</button>
+                            <input type="text" placeholder="输入短信验证码" />
+                        </li>
+                        <li>
+                            <input type="password" placeholder="密码" />
+                        </li>
+                        <li>
+                            <button type="submit">免费注册</button>
+                        </li>
+                    </ul>
+                </form>
+                <p>已经有帐号？<a href="#">马上登录</a></p>
+            </div>
+            <div class="sign-in"><a href="#">用QQ帐号登录</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

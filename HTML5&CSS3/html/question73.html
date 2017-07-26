@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第十课：TransForm变换</title>
+    <style type="text/css">
+    body {
+        background: linear-gradient(#FF0 0%, #000 80%) no-repeat;
+        height: 427px;
+    }
+    
+    .wrap {
+        perspective: 500px
+    }
+
+    .cube {
+        width: 200px;
+        height: 200px;
+        margin: 200px auto;
+        position: relative;
+        
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg);
+        animation: rotate 10s infinite linear;
+        
+    }
+    
+    .cube>div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        background-color: #333;
+        border: 1px solid #FFF;
+        opacity: 0.9;
+        color: #FFF;
+        text-align: center;
+        font: 36px/200px "microsoft yaihe";
+        transition: transform 0.2s linear;
+        z-index: 999;
+    }
+    
+    .cube .out-front {
+        transform: translateZ(100px);
+    }
+
+    .cube .out-back {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .cube .out-left {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube .out-right {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .cube .out-top {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .cube .out-bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .cube:hover .out-front {
+        transform: translateZ(200px);
+    }
+
+    .cube:hover .out-back {
+        transform: rotateY(180deg) translateZ(200px);
+    }
+
+    .cube:hover .out-left {
+        transform: rotateY(-90deg) translateZ(200px);
+    }
+
+    .cube:hover .out-right {
+        transform: rotateY(90deg) translateZ(200px);
+    }
+
+    .cube:hover .out-top {
+        transform: rotateX(90deg) translateZ(200px);
+    }
+
+    .cube:hover .out-bottom {
+        transform: rotateX(-90deg) translateZ(200px);
+    }
+
+    .cube>span {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        background-color: #999;
+        position: absolute;
+        opacity: 0.5;
+        top: 50px;
+        left: 50px;
+    }
+
+    .cube .in-front {
+        transform: translateZ(50px);
+    }
+
+    .cube .in-back {
+        transform: translateZ(-50px) rotateY(180deg);
+    }
+
+    .cube .in-left {
+        transform: rotateY(-90deg) translateZ(50px);
+    }
+
+    .cube .in-right {
+        transform: rotateY(90deg) translateZ(50px);
+    }
+
+    .cube .in-top {
+        transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .cube .in-bottom {
+        transform: rotateX(-90deg) translateZ(50px);
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotateX( 0deg) rotateY( 0deg);
+        }
+        100% {
+            transform: rotateX( 360deg) rotateY( 360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="cube">
+            <div class="out-front">前面</div>
+            <div class="out-back">后面</div>
+            <div class="out-left">左面</div>
+            <div class="out-right">右面</div>
+            <div class="out-top">上面</div>
+            <div class="out-bottom">下面</div>
+            
+            <span class="in-front"></span>
+            <span class="in-back"></span>
+            <span class="in-left"></span>
+            <span class="in-right"></span>
+            <span class="in-top"></span>
+            <span class="in-bottom"></span>
+        </div>
+    </div>
+</body>
+
+</html>

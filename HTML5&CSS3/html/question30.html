@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>边框与边距</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    body {
+        padding: 30px;
+    }
+    
+	li{
+		width: 200px;
+		height:200px;
+		float: left;
+	}
+    
+    div {
+        margin: 0px auto;
+    }
+    
+    .box1 {
+        width: 60px;
+        height: 60px;
+        background-color: #70EF17;
+        border-radius: 50%;
+    }
+    
+    .box2 {
+        width: 120px;
+        height: 60px;
+        background-color: #EA8903;
+        border-radius: 50%;
+    }
+    
+    .box3 {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-bottom: 60px solid #FCF700;
+        border-right: 30px solid transparent;
+    }
+    
+    .box4 {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-top: 60px solid #2DA4C0;
+        border-right: 30px solid transparent;
+    }
+    
+    .box5 {
+        width: 0;
+        height: 0;
+        border-top: 30px solid transparent;
+        border-right: 60px solid #45701A;
+        border-bottom: 30px solid transparent;
+        margin-right: 80px;
+    }
+    
+    .box5::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 30px solid transparent;
+        border-left: 60px solid #81011A;
+        border-bottom: 30px solid transparent;
+        position: relative;
+        left: 60px;
+        top: -30px;
+    }
+    
+    .box6 {
+        width: 60px;
+        height: 60px;
+        background-color: #8F00FF;
+        transform: rotate(45deg);
+    }
+    
+    .box7 {
+        width: 60px;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-bottom: 60px solid #DD2000;
+        border-right: 30px solid transparent;
+    }
+    
+    .box8 {
+        width: 60px;
+        height: 60px;
+        background-color: #B11A8A;
+    }
+    
+    .box9 {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #FFD500;
+        border-radius: 50%;
+    }
+    
+    .box10 {
+        width: 75px;
+        height: 60px;
+        background-color: #2ADB00;
+        transform: skew(30deg);
+    }
+    
+    .box11 {
+        width: 0px;
+        height: 0px;
+        border-left: 45px solid transparent;
+        border-bottom: 33px solid #F00;
+        border-right: 45px solid transparent;
+        transform: rotate(36deg);
+        position: relative;
+    }
+    
+    .box11:before {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: -27px;
+        top: -22px;
+        border-left: 10px solid transparent;
+        border-bottom: 31px solid #F00;
+        border-right: 10px solid transparent;
+        transform: rotate(-36deg);
+    }
+    
+    .box11::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: -45px;
+        border-left: 45px solid transparent;
+        border-bottom: 33px solid #F00;
+        border-right: 45px solid transparent;
+        transform: rotate(-72deg);
+    }
+    
+    .box12 {
+        margin-top: -20px;
+        width: 0px;
+        height: 0px;
+        border-left: 30px solid transparent;
+        border-bottom: 60px solid #D0D907;
+        border-right: 30px solid transparent;
+        position: relative;
+    }
+    
+    .box12::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        top: 20px;
+        left: -30px;
+        border-left: 30px solid transparent;
+        border-top: 60px solid #D0D907;
+        border-right: 30px solid transparent;
+    }
+    
+    .box13 {
+        width: 0px;
+        height: 0px;
+        border-left: 30px solid transparent;
+        border-bottom: 25px solid #7218E3;
+        border-right: 30px solid transparent;
+        position: relative;
+    }
+    
+    .box13::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 0px;
+        position: absolute;
+        top: 25px;
+        left: -30px;
+        border-left: 15px solid transparent;
+        border-top: 30px solid #7218E3;
+        border-right: 15px solid transparent;
+    }
+    
+    .box14 {
+        width: 86.6px;
+        height: 50px;
+        margin-left: 50px;
+        background-color: #000;
+        position: relative;
+    }
+    
+    .box14::before,
+    .box14::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        border-left: 43.3px solid transparent;
+        border-right: 43.3px solid transparent;
+        position: absolute;
+    }
+    
+    .box14::before {
+        border-bottom: 25px solid #000;
+        top: -25px;
+    }
+    
+    .box14::after {
+        border-top: 25px solid #000;
+        bottom: -25px;
+    }
+    
+    .box15 {
+        width: 102.4px;
+        height: 42.4px;
+        background-color: #66E100;
+        position: relative;
+    }
+    
+    .box15::before,
+    .box15::after {
+        content: "";
+        display: block;
+        width: 42.4px;
+        height: 0px;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        position: absolute;
+    }
+    
+    .box15::before {
+        border-bottom: 30px solid #66E100;
+        top: -30px;
+    }
+    
+    .box15::after {
+        border-top: 30px solid #66E100;
+        bottom: -30px;
+    }
+    
+    .box16 {
+        width: 150px;
+        height: 150px;
+        margin-top: -30px;
+        margin-left: 70px;
+        position: relative;
+    }
+    
+    .box16::before,
+    .box16::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 80px;
+        border-radius: 25px 25px 0 0;
+        background-color: #F00;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform-origin: 25px 55px;
+    }
+    
+    .box16::before {
+        transform: rotate(-45deg);
+    }
+    
+    .box16::after {
+        transform: rotate(45deg);
+    }
+    
+    .box17 {
+        width: 80px;
+        height: 140px;
+        background-color: #FFB124;
+        border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+        margin-top: -50px;
+    }
+    
+    .box18 {
+        width: 200px;
+        height: 100px;
+        margin-left: 20px;
+        position: relative;
+    }
+    
+    .box18::before,
+    .box18::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 15px solid #008CB1;
+        border-radius: 30px 30px 30px 0;
+        position: absolute;
+    }
+    
+    .box18::before {
+        transform: rotate(-135deg);
+        top: 0px;
+        left: 0px;
+    }
+    
+    .box18::after {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 63.5px;
+    }
+
+    .box19 {
+    	width: 120px;
+    	height: 60px;
+    	border-radius: 10px;
+    	background-color: #8967BA;
+    	position: relative;
+    }
+
+    .box19:before {
+    	content: "";
+    	display: block;
+    	width: 0px;
+    	height: 0px;
+    	border-top: 10px solid transparent;
+    	border-right: 30px solid #8967BA;
+    	border-bottom: 10px solid transparent;
+    	position: absolute;
+    	top: 20px;
+    	left: -30px;
+    }
+
+    .box20 {
+    	width: 30px;
+    	height: 0px;
+    	border-left: 15px solid transparent;
+    	border-bottom: 15px solid #9BFF00;
+    	border-right: 15px solid transparent;
+    	position: relative;
+    }
+
+	.box20::after {
+		content: "";
+		display: block;
+		width: 0px;
+		height: 0px;
+		border-left: 30px solid transparent;
+		border-top: 40px solid #9BFF00;
+		border-right: 30px solid transparent;
+		position: absolute;
+		left: -15px;
+		bottom: -55px;
+	}
+
+	.box21 {
+		width: 96px;
+		height: 48px;
+		border: 2px solid #000;
+		border-bottom-width: 50px;
+		border-radius: 50px;
+		position: relative;
+	}
+
+	.box21::before,
+	.box21::after {
+		content: "";
+		display: block;
+		width: 8px;
+		height: 8px;
+		background-color: #FFF;
+		border: 20px solid #000;
+		border-radius: 24px;
+		position: relative;
+	}
+
+	.box21::before {
+		left: 0px;
+		top: 25px;
+	}
+
+	.box21::after {
+		background-color: #000;
+		border: 20px solid #FFF;
+		left: 48px;
+		top: -25px;
+	}
+
+	.box22 {
+		width: 0px;
+		height: 0px;
+		border: 50px solid #2D06EE;
+		border-right-color: transparent;
+		border-radius: 50px;
+	}
+
+	.box23 {
+		width: 0px;
+		height: 0px;
+		border-top: 100px solid #AC9FD2;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-radius: 50px;
+	}
+
+	.box24 {
+		width: 85px;
+		height: 85px;
+		border-radius: 50px;
+		box-shadow: 15px 15px #9700D3;
+	}
+
+	.box25 {
+		width: 0px;
+		height: 0px;
+		border-top: 50px solid #7FFDE2;
+		border-right: 50px solid transparent;
+	}
+
+	.box26 {
+		width: 0px;
+		height: 0px;
+		border-top: 50px solid #3E0021;
+		border-left: 50px solid transparent;
+	}
+
+	.box27 {
+		width: 0px;
+		height: 0px;
+		border-bottom: 50px solid #6006FE;
+		border-right: 50px solid transparent;
+	}
+
+	.box28 {
+		width: 0px;
+		height: 0px;
+		border-bottom: 50px solid #FF7679;
+		border-left: 50px solid transparent;
+	}
+
+	.box29 {
+		width: 50px;
+		height: 50px;
+		background-color: #D07768;
+		transform: rotate(22.5deg);
+	}
+
+	.box29::before {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #D07768;
+		transform: rotate(45deg);
+	}
+
+	.box30 {
+		width: 50px;
+		height: 50px;
+		background-color: #A9FF21;
+		transform: rotate(22.5deg);
+		position: relative;
+	}
+
+	.box30::before,
+	.box30::after {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #A9FF21;
+		transform: rotate(30deg);
+	}
+
+	.box30::after {
+		background-color: #red;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		transform: rotate(-30deg);
+	}
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box1"></div>
+        </li>
+        <li>
+            <div class="box2"></div>
+        </li>
+        <li>
+            <div class="box3"></div>
+        </li>
+        <li>
+            <div class="box4"></div>
+        </li>
+        <li>
+            <div class="box5"></div>
+        </li>
+        <li>
+            <div class="box6"></div>
+        </li>
+        <li>
+            <div class="box7"></div>
+        </li>
+        <li>
+            <div class="box8"></div>
+        </li>
+        <li>
+            <div class="box9"></div>
+        </li>
+        <li>
+            <div class="box10"></div>
+        </li>
+        <li>
+            <div class="box11"></div>
+        </li>
+        <li>
+            <div class="box12"></div>
+        </li>
+        <li>
+            <div class="box13"></div>
+        </li>
+        <li>
+            <div class="box14"></div>
+        </li>
+        <li>
+            <div class="box15"></div>
+        </li>
+        <li>
+            <div class="box16"></div>
+        </li>
+        <li>
+            <div class="box17"></div>
+        </li>
+        <li>
+            <div class="box18"></div>
+        </li>
+        <li>
+            <div class="box19"></div>
+        </li>
+        <li>
+            <div class="box20"></div>
+        </li>
+        <li>
+            <div class="box21"></div>
+        </li>
+        <li>
+            <div class="box22"></div>
+        </li>
+        <li>
+            <div class="box23"></div>
+        </li>
+        <li>
+            <div class="box24"></div>
+        </li>
+        <li>
+            <div class="box25"></div>
+        </li>
+        <li>
+            <div class="box26"></div>
+        </li>
+        <li>
+            <div class="box27"></div>
+        </li>
+        <li>
+            <div class="box28"></div>
+        </li>
+        <li>
+            <div class="box29"></div>
+        </li>
+        <li>
+            <div class="box30"></div>
+        </li>
+    </ul>
+</body>
+
+</html>

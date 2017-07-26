@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main {
+        width: 640px;
+        background-color: #EDF3FF;
+        margin: 20px auto 0;
+        padding: 5px;
+        border: 1px solid #ABB5C1;
+        border-radius: 5px;
+    }
+    
+    .main>p {
+        font: 14px/18px "mircosoft yahei";
+        padding-left: 20px;
+        background: url(../img/bg06.png) no-repeat -2px -4px;
+        margin-bottom: 5px;
+    }
+    
+    .info {
+        width: 100%;
+        border: 1px solid #abb5c1;
+        background-color: #FFF;
+    }
+    
+    .info>p {
+        font: 12px/20px "mircosoft yahei";
+        margin-bottom: 10px;
+        padding: 10px 0 10px 25px;
+        background: #FFFEE7 url(../img/bg06.png) no-repeat 5px -27px;
+    }
+    
+    table {
+        width: 90%;
+        margin: 0 auto 20px;
+        font: 16px/36px "mircosoft yahei";
+        border-collapse: collapse;
+    }
+    
+    td {
+        border: 1px solid #ABB5C1;
+        vertical-align:middle;
+        height: 40px;
+        padding: 0 5px;
+    }
+    
+    td:nth-of-type(odd) {
+        width: 18%;
+        text-align: center;
+        word-spacing: 27px;
+        background-color: #E9F3FF;
+    }
+    
+    input,
+    select,
+    textarea {
+        width: 100%;
+        height: 28px;
+        text-indent: 0.5em;
+    }
+
+    select {
+        text-indent: 0.17em;
+    }
+    
+    textarea{
+    	display:block; 
+    	line-height: 28px;
+    }
+    
+    button {
+        width: 63px;
+        height: 23px;
+        border: 1px solid #ABB5C1;
+        border-radius: 12px;
+        float: right;
+        margin: 5px;
+        padding-left: 15px;
+        background: url(../img/bg06.png) no-repeat -2px -84px;
+        cursor: pointer;
+    }
+    button[type="button"] {
+    	background: url(../img/bg06.png) no-repeat 2px -119px;
+    }
+    .btn{
+    	overflow: hidden;
+    	padding: 5px;
+    	background-color: #f4f4f4;
+    	border-top: 1px solid #DCDCDC;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <p>创建简历</p>
+        <div class="info">
+            <p>注意：录入个人简历</p>
+            <form>
+                <table>
+                    <tr>
+                        <td>姓 名</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>性 别</td>
+                        <td>
+                            <select>
+                                <option value="男" selected="selected">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>电子邮箱</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>教育程度</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>工作职位</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>工作城市</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>期望工资</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>自我介绍</td>
+                        <td colspan="3">
+                            <textarea></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>特 长</td>
+                        <td colspan="3">
+                            <textarea></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>地 址</td>
+                        <td colspan="3">
+                            <textarea></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <div class="btn">
+                    <button type="button">关闭</button>
+                    <button type="submit">添加</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

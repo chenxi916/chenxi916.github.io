@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS优先级</title>
+    <style type="text/css">
+    body {
+        padding: 20px 100px;
+    }
+
+    #three {
+        font-size: 30px;
+        color: red;
+    }
+    
+    /* 
+		通过id选择器#three与类选择器.two、伪类选择器li:nth-of-type(2)、属性选择器li[id="three"]比较：
+		id选择器的优先级比类选择器、伪类选择器、属性选择器的高
+     */
+
+    li[id="three"] {
+        font-size: 28px;
+        color: yellowgreen;
+    }
+    
+    li:nth-of-type(3) {
+        font-size: 26px;
+        color: pink;
+    }
+    
+    li[id="four"] {
+        font-size: 24px;
+        color: green;
+    }
+    
+    li:nth-of-type(2) {
+        font-size: 22px;
+        color: yellow;
+    }
+    
+    .two {
+        font-size: 20px;
+        color: blue;
+    }
+    /* 
+		通过类选择器.two、伪类选择器li:nth-of-type(2)、属性选择器li[id="three"]与元素选择器p比较：
+		类选择器、伪类选择器、属性选择器的优先级比元素选择器的高
+     */
+    
+    p,
+    li {
+        font-size: 18px;
+        color: #F90;
+    }
+    /* 
+		通过通配选择器*和元素选择器p比较：
+		元素选择器优先级比通配选择器的高
+	 */
+    
+    * {
+        font-size: 16px;
+        color: #f40;
+    }
+    
+    dl {
+        font-size: 14px;
+        color: #666;
+    }
+    /* 	
+		通过通配选择器*和dl选择器继承给dt元素、dd元素相比较：
+		通配选择器的优先级比继承的高 
+	*/
+
+
+	#inline {
+		font-size: 32px;
+		color: black;
+	}
+    </style>
+</head>
+
+<body>
+    <dl>
+        <dt>定义列表标题</dt>
+        <dd>定义列表数据</dd>
+    </dl>
+    <p>第一个段落</p>
+    <p class="two">第二个段落</p>
+    <p id="three">第三个段落</p>
+    <ul>
+        <li>第一个列表</li>
+        <li class="two">第二个列表</li>
+        <li id="three">第三个列表</li>
+        <li id="four">第四个列表</li>
+    </ul>
+
+    <p id="inline">第四个段落</p>
+    <p id="inline" style="font-size: 36px; color: orange">第四个段落</p>
+    <!--
+    	 通过行内选择器与id选择器#inline相比较：
+		行内选择器的优先级比id选择器的高
+     -->
+    <p id="inline" style="font-size: 40px; color: skyblue !important">第四个段落</p>
+	<!--
+    	 通过添加了important的与行内选择器相比较：
+		important的优先级比行内选择器的高
+     -->
+</body>
+
+</html>

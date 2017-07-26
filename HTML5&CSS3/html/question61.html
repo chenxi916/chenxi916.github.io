@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第八课：浮动与定位</title>
+    <style type="text/css">
+    .box {
+        height: 120px;
+    }
+    
+    .f {
+        border: 1px solid #f40;
+    }
+    
+    /* 第一种方案 */
+    .clearfix1 {
+        height: 90px;
+    }
+
+    /* 第二种方案 */
+    .clearfix2 {
+        overflow: hidden;
+    }
+
+    /* 第三种方案 */
+    .clearfix3 {
+        clear: both;
+    }
+
+    /* 第四种方案 */
+    .clearfix4::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    ul {
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="f">
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div class="f clearfix1">
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div class="f clearfix2">
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div class="f">
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+            </ul>
+            <div class="clearfix3"></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="f clearfix4">
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

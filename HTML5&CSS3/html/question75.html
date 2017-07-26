@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第十一课：animation及CSS3动画综合</title>
+    <style type="text/css">
+    @keyframes scroll {
+        0% {
+            left: 0px;
+        }
+        100% {
+            left: -750px;
+        }
+    }
+    
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    div {
+        width: 750px;
+        height: 150px;
+        margin: 200px auto;
+        border: 2px solid #6AD7E9;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    ul {
+        list-style: none;
+        width: 200%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        animation: scroll 4s linear infinite;
+    }
+    
+    ul li {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background-color: #F40;
+        border: 1px solid #0F0;
+        color: #FFF;
+        font: bold 30px/150px "Microsoft YaHei";
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    ul:hover {
+        animation-play-state: paused;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

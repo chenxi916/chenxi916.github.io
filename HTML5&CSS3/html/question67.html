@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第八课：浮动与定位</title>
+    <style type="text/css">
+    nav {
+        position: relative;
+    }
+
+    ul {
+        list-style: none;
+    }
+    
+    li a {
+        text-decoration: none;
+        padding-left: 10px;
+        display: block;
+        color: #FFF;
+        line-height: 48px;
+        width: 100px;
+        height: 48px;
+        background-color: #222;
+        border-right: 1px solid #000;
+    }
+    
+    li a:hover {
+        color: #c83a2f;
+    }
+    
+    .two , .there {
+        display: none;
+    }
+
+    li:nth-of-type(2) a:hover .two {
+        display: block;
+        position: absolute;
+        top: 32px;
+        left: 111px;
+    }
+
+    .there {
+        position: absolute;
+        top: 128px;
+        left: 222px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="one">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">服务</a>
+            </li>
+            <li>
+                <a href="#">产品</a>
+            </li>
+            <li>
+                <a href="#">关于我们</a>
+            </li>
+            <li>
+                <a href="#">博客</a>
+            </li>
+            <li>
+                <a href="#">导航</a>
+            </li>
+            <li>
+                <a href="#">信息</a>
+            </li>
+            <li>
+                <a href="#">团队</a>
+            </li>
+            <li>
+                <a href="#">常见问题</a>
+            </li>
+            <li>
+                <a href="#">案例</a>
+            </li>
+        </ul>
+        <ul class="two">
+            <li>
+                <a href="#">二级导航</a>
+            </li>
+            <li>
+                <a href="#">二级导航</a>
+            </li>
+            <li>
+                <a href="#">二级导航</a>
+            </li>
+            <li>
+                <a href="#">二级导航</a>
+            </li>
+            <li>
+                <a href="#">二级导航</a>
+            </li>
+        </ul>
+        <ul class="there">
+            <li>
+                <a href="#">三级导航</a>
+            </li>
+            <li>
+                <a href="#">三级导航</a>
+            </li>
+            <li>
+                <a href="#">三级导航</a>
+            </li>
+            <li>
+                <a href="#">三级导航</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

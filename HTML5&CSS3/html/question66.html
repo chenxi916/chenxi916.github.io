@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第八课：浮动与定位</title>
+    <style type="text/css">
+    .circular {
+        margin: 50px auto;
+        width: 600px;
+        position: relative;
+    }
+
+    .box1 {
+        width: 140px;
+        height: 140px;
+        border: 20px solid #181a6f;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .box2::before {
+        content: "";
+        display: block;
+        width: 140px;
+        height: 140px;
+        border: 20px solid transparent;
+        border-right-color: #181a6f;
+        border-radius: 50%;
+        position: absolute;
+        left: -122px;
+        top: -95px;
+        z-index: 4;
+    }
+
+    .box2 {
+        width: 140px;
+        height: 140px;
+        border: 20px solid #dff33c;
+        border-radius: 50%;
+        position: absolute;
+        left: 102px;
+        top: 75px;
+        z-index: 3;
+    }
+
+    .box3 {
+        width: 140px;
+        height: 140px;
+        border: 20px solid #000000;
+        border-radius: 50%;
+        position: absolute;
+        left: 205px;
+        top: 0px;
+        z-index: 2;
+    }
+
+    .box2::after {
+        content: "";
+        display: block;
+        width: 140px;
+        height: 140px;
+        border: 20px solid transparent;
+        border-bottom-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        left: 83px;
+        top: -95px;
+        z-index: 1;
+    }
+
+    .box4 {
+        width: 140px;
+        height: 140px;
+        border: 20px solid #38d130;
+        border-radius: 50%;
+        position: absolute;
+        left: 304px;
+        top: 75px;
+        z-index: 4;
+    }
+
+    .box4::before {
+        content: "";
+        display: block;
+        width: 140px;
+        height: 140px;
+        border: 20px solid transparent;
+        border-right-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        left: -119px;
+        top: -95px;
+        z-index: 1;
+    }
+
+    .box5 {
+        width: 140px;
+        height: 140px;
+        border: 20px solid #eb403b;
+        border-radius: 50%;
+        position: absolute;
+        left: 405px;
+        top: 0px;
+        z-index: 3;
+    }
+
+    .box4::after {
+        content: "";
+        display: block;
+        width: 140px;
+        height: 140px;
+        border: 20px solid transparent;
+        border-bottom-color: #eb403b;
+        border-radius: 50%;
+        position: absolute;
+        left: 81px;
+        top: -95px;
+        z-index: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="circular">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+</body>
+
+</html>

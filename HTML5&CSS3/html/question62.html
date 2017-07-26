@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第八课：浮动与定位</title>
+    <style type="text/css">
+    .f {
+        margin: 0px auto 20px;
+        width: 150px;
+        height: 150px;
+        padding: 50px;
+        border: 1px solid #F00;
+        position: relative;
+    }
+    
+    .box1 {
+        width: 150px;
+        height: 150px;
+        background-color: #0F0;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .box2 {
+        width: 150px;
+        height: 150px;
+        background-color: #F40;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+    .box3 {
+        width: 150px;
+        height: 150px;
+        background-color: #F80;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="f">
+        <div class="box1">绝对定位</div>
+    </div>
+    <div class="f">
+        <div class="box2">相对定位</div>
+    </div>
+    <div class="f">
+        <div class="box3">固定定位</div>
+    </div>
+
+</body>
+
+</html>
